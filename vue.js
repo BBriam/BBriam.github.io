@@ -2,7 +2,7 @@ const { createApp } = Vue
 createApp({
   data(){
     return{
-      mensaje: "Prueba de vue",
+      mensaje: "Ubicaciones",
     }
   }
 }).mount("#app")
