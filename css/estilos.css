@@ -433,7 +433,8 @@ body {
   width: 400px;
   text-align: center;
   margin: auto;
-  color: #f70202;
+  color: #a202a2;
+  font-size: 17.5px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
