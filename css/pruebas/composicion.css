@@ -1,0 +1,94 @@
+/*porque no rellena */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  /* width: 100%; */
+}
+
+body {
+  font-family: "Open Sans";
+  font-size: 16px;
+  min-height: 100%;
+}
+
+
+.marco_slider {
+  width: 400px;
+  height: auto;
+  margin: 50px auto 0;
+  overflow: hidden;
+}
+
+.marco_slider ul.slider {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: transicion 16s infinite alternate ease-in-out;
+}
+
+.marco_slider li.slider {
+  list-style: none;
+  width: 100%;
+}
+
+.marco_slider li.menu_slider {
+  list-style: none;
+}
+
+.marco_slider img {
+  width: 100%;
+}
+
+
+
+
+
+
+
+.marco_slider li{
+  display: inline-block;
+  text-align: center;
+}
+
+.marco_slider li a {
+  display: inline-block;
+  color: white;
+  background-color: gray;
+  text-decoration: none;
+  padding: 10px;
+  width: 10px;
+  height: 20px;
+  font-size: 20px;
+  border-radius: 100%;
+}
+
+
+
+
+
+
+
+@keyframes transicion {
+  0%{margin-left: 0%;}
+  20%{margin-left: 0%;}
+
+  25%{margin-left: -100%;}
+  45%{margin-left: -100%;}
+
+  50%{margin-left: -200%;}
+  70%{margin-left: -200%;}
+
+  75%{margin-left: -300%;}
+  100%{margin-left: -300%;}
+}
+
+
+
+
+
+
