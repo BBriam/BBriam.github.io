@@ -438,3 +438,31 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
+.tot_com {
+  background-color: rgb(248, 248, 248);
+  padding: 5px;
+  border-radius: 5px;
+  margin: 7px;
+  text-align: center;
+  }
+
+.img_nom_com {
+  grid-area: fot_perf;
+  display:grid;
+  grid-template:
+  "fot_perf nom_perf"/
+  15% 85%;
+  }
+
+.com_com {
+  grid-area: nom_perf;
+  text-align: justify;
+  margin-left: 60px;
+}
+
+.nom_nom {
+  padding-top: 5px;
+  font-weight: 500;
+  background-color: rgb(248, 248, 248);
+}

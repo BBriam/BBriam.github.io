@@ -99,19 +99,25 @@
           &#x1F4B2; 14.500
           <br>
           <br>
-          <br>
         </div>
         <div class="caract_prod">
           &#x1F9CA; Sintetico
           <br>
-          <br>
           &#x1F3A8; Negro, azul
-          <br>
           <br>
           &#x1F3F7;&#xFE0F; Biolandia
           <br>
-          <br>
           &#x1F4E6; 17 unidades
+          <br>
+          <br>
+          <div class="tot_com">
+            <div class="img_nom_com" id="datos_perfil1"></div>
+            <div class="com_com" id="datos_comentario1"></div>
+          </div>
+          <div class="tot_com">
+            <div class="img_nom_com" id="datos_perfil2"></div>
+            <div class="com_com" id="datos_comentario2"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -152,5 +158,60 @@
     </div>
   </footer>
   <script src="https://kit.fontawesome.com/bc7a9e3b66.js" crossorigin="anonymous"></script>
+  <script>
+    let ruta_perfil = 'https://randomuser.me/api/?nat=es'//variable donde hacemos referencia al origen de los datos
+    let ruta_coment = 'https://jsonplaceholder.typicode.com/comments' //variable donde hacemos referencia al origen de los datos
+    fetch(ruta_perfil) //solicitud a la url (promesa)
+      .then(response => response.json()) //se resuelve la promesa, al obtener la respuesta la pasa a un determinado formato (json)
+      .then(data1 => traer_nombre1(data1)) //llamamos a la función mostrardata()
+      .catch(error => console.log("Ocurrió un error", error)) // si hay un error será atrapado por catch
+
+    fetch(ruta_perfil) //solicitud a la url (promesa)
+      .then(response => response.json()) //se resuelve la promesa, al obtener la respuesta la pasa a un determinado formato (json)
+      .then(data1 => traer_nombre2(data1)) //llamamos a la función mostrardata()
+      .catch(error => console.log("Ocurrió un error", error)) // si hay un error será atrapado por catch
+
+    fetch(ruta_coment) //solicitud a la url (promesa)
+      .then(response => response.json()) //se resuelve la promesa, al obtener la respuesta la pasa a un determinado formato (json)
+      .then(data2 => traer_comentario(data2)) //llamamos a la función mostrardata()
+      .catch(error => console.log("Ocurrió un error", error)) // si hay un error será atrapado por catch
+
+    const traer_nombre1 = (data) => {
+      let obj_nom = data["results"][0]["name"]
+      let obj_img = data["results"][0]["picture"]["medium"]
+      console.log(obj_img)
+      let contenido = ''
+      contenido += `
+                                <img src="${obj_img}" width="50px" height="50px" class="rounded-circle">
+                                <p class="nom_nom" >${obj_nom["first"]} ${obj_nom["last"]}</p>
+                                `
+      document.getElementById("datos_perfil1").innerHTML = contenido
+    }
+
+    const traer_nombre2 = (data) => {
+      let obj_nom = data["results"][0]["name"]
+      let obj_img = data["results"][0]["picture"]["medium"]
+      console.log(obj_img)
+      let contenido = ''
+      contenido += `
+                                <img src="${obj_img}" width="50px" height="50px" class="rounded-circle">
+                                <p class="nom_nom" >${obj_nom["first"]} ${obj_nom["last"]}</p>
+                                `
+      document.getElementById("datos_perfil2").innerHTML = contenido
+    }
+
+    const traer_comentario = (data) => {
+      let id1 = Math.floor(Math.random() * 500).toString()
+      let id2 = Math.floor(Math.random() * 500).toString()
+      let obj_com1 = data[id1]["body"]
+      let obj_com2 = data[id2]["body"]
+      let contenido1 = ''
+      let contenido2 = ''
+      contenido1 += `<p>${obj_com1}</p>`
+      contenido2 += `<p>${obj_com2}</p>`
+      document.getElementById("datos_comentario1").innerHTML = contenido1
+      document.getElementById("datos_comentario2").innerHTML = contenido2
+    }
+  </script>
 </body>
 </html>
