@@ -1,9 +1,7 @@
 .marco_slider {
   width: 1349px;
   height: 513px;
-  /* margin: 50px auto 0; */
   overflow: hidden;
-  
 }
 
 .marco_slider ul {
@@ -57,5 +55,41 @@
 
 
 
+@media (max-width: 1087px) {
 
+.marco_slider {
+  width: 1087px;
+  height: 413px;
+  overflow: hidden;
+}
 
+.marco_slider p {
+  font-size: 40px;
+}
+}
+
+@media (max-width: 600px) {
+
+.marco_slider {
+  width: 600px;
+  height: 228px;
+  overflow: hidden;
+}
+
+.marco_slider p {
+  font-size: 25px;
+}
+}
+
+@media (max-width: 500px) {
+.marco_slider {
+  width: 500px;
+  height: 190px;
+  overflow: hidden;
+}
+
+.marco_slider p {
+  font-size: 20px;
+  transform: translate(-50%, -100%);
+}
+}

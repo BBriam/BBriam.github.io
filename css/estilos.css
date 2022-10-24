@@ -35,11 +35,11 @@ body {
   align-content: center;
 }
 
-/* .buscar {
-  padding: 10px;
-  border-radius: 5px;
-  background-color: rgb(245, 245, 245);
-} */
+
+
+.borde_forma {
+  box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.12);
+}
 
 .header {
   /* background-color: rgb(0, 192, 255); */
@@ -69,9 +69,6 @@ body {
   grid-area: footer;
   height: 100%;
 }
-
-
-
 
 .logo_header {
   grid-area: logo;
@@ -384,10 +381,12 @@ body {
   margin: 20px;
   display: grid;
   grid-template-columns: auto auto auto;
+  
 }
 
 .ubicaciones iframe {
   border-radius: 5px;
+  box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.25);
 }
 
 @keyframes cambio {
@@ -402,31 +401,6 @@ body {
 
   75%{margin-left: -300%;}
   95%{margin-left: -300%;}
-}
-
-@media (max-width: 600px) {
-
-.grid-container_1 {
-
-  background-color: #2fff00;
-  display: grid;
-  grid-template:
-  "header" 3fr
-  "sidebar" 30px
-  "main" auto
-  "footer" 3fr /
-  100%;
-  }
-
-.malla_3_header {
-  background-color: blue;
-  display:grid;
-  grid-template:
-  "logo barbusq" auto
-  "navbar navbar" auto/
-  1fr 1fr;
-  }
-
 }
 
 .advertencias {
@@ -465,4 +439,166 @@ body {
   padding-top: 5px;
   font-weight: 500;
   background-color: rgb(248, 248, 248);
+}
+
+@media (max-width: 1087px) {
+
+.grid-container_1 {
+  display: grid;
+  grid-template:
+  "header" 3fr
+  "sidebar" 30px
+  "main" auto
+  "footer" 3fr /
+  100%;
+  }
+
+.malla_3_header {
+  display:grid;
+  grid-template:
+  "logo barbusq" auto
+  "navbar navbar" auto/
+  2fr 8fr;
+  }
+
+.malla_4_nav {
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+  display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  }
+
+.cat_item_gen {
+  width: 290px;
+  height: 153px;
+}
+
+.cat_item_gen p {
+  font-size: 22px;
+}
+
+.malla_1_nav_a{
+  left: 55px;
+}
+
+.malla_1_nav_b {
+  left: 75px;
+}
+
+.malla_1_nav_c {
+  left: 65px;
+}
+
+}
+
+@media (max-width: 600px) {
+.grid-container_1 {
+  display: grid;
+  grid-template:
+  "header" 3fr
+  "sidebar" 30px
+  "main" auto
+  "footer" 3fr /
+  100%;
+  }
+
+.malla_3_header {
+  display:grid;
+  grid-template:
+  "logo barbusq" auto
+  "navbar navbar" auto/
+  2fr 8fr;
+  }
+
+.malla_4_nav {
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+  display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  }
+
+.cat_item_gen {
+  width: 155px;
+  height: 82px;
+}
+
+.cat_item_gen p {
+  font-size: 14px;
+}
+
+.contactos, .infocompany, .redes_soc {
+  font-size: 15px;
+  margin-left: 35px;
+}
+.contactos a, .infocompany a, .redes_soc a {
+  font-size: 11px;
+}
+}
+
+@media (max-width: 500px) {
+.grid-container_1 {
+  display: grid;
+  grid-template:
+  "header" 3fr
+  "sidebar" 30px
+  "main" auto
+  "footer" 3fr /
+  100%;
+  }
+
+.malla_3_header {
+  display:grid;
+  grid-template:
+  "logo barbusq" auto
+  "navbar navbar" auto/
+  2fr 8fr;
+  }
+
+.malla_4_nav {
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 15px;
+  display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  }
+
+.cat_item_gen {
+  width: 100px;
+  height: 53px;
+  /* width: 155px;
+  height: 82px; */
+}
+
+.cat_item_gen p {
+  font-size: 9px;
+}
+
+.contactos, .infocompany, .redes_soc {
+  font-size: 14px;
+  margin-left: 35px;
+}
+.contactos a, .infocompany a, .redes_soc a {
+  font-size: 9px;
+}
+
+.malla_1_nav_a{
+  left: 5px;
+}
+
+.malla_1_nav_b {
+  left: 24px;
+}
+
+.malla_1_nav_c {
+  left: 15px;
+}
+
 }
